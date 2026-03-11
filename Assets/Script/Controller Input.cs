@@ -15,7 +15,6 @@ public class ControllerInput : MonoBehaviour
     void Update()
     {
         //use with a stick
-        //
         //transform.position += (Vector3)movement * speed * Time.deltaTime;
         transform.position = movement;
     }
