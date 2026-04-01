@@ -1,0 +1,51 @@
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class ClicktoMove : MonoBehaviour
+{
+    public LineRenderer lr;
+    public Vector2 mousePosNewInputSystem;
+    public List<Vector2> points;
+    void Start()
+    {
+        points = new List<Vector2>();
+        points.Add(transform.position);
+        UpdateLineRenderer();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            //add new point into the line
+            //lr.positionCount++;
+            //lr.SetPosition(lr.positionCount - 1, mousePos);
+            Vector2 newPos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+            points.Add(newPos);
+            UpdateLineRenderer();
+        }
+        if (Mouse.current.rightButton.wasPressedThisFrame)
+        {
+            points.RemoveAt(0);
+            UpdateLineRenderer();
+        }
+
+
+    }
+
+    void UpdateLineRenderer()
+    {
+        lr.positionCount = points.Count;
+        for (int i = 0; i < points.Count; i++)
+        {
+            lr.SetPosition(i, points[i]);
+        }
+    }
+
+    //public void OnPoint(InputAction.CallbackContext context)
+    //{
+    //    mousePosNewInputSystem = Camera.main.ScreenToWorldPoint(context.ReadValue<Vector2>());
+   // }
+}
