@@ -17,7 +17,7 @@ public class TilemapStuff : MonoBehaviour
         Vector2 mousePos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         Vector3Int cellPos = tilemap.WorldToCell(mousePos);
         Vector3 pos = tilemap.GetCellCenterWorld(cellPos);
-        //Debug.Log(mousePos + " is at cell: " + cellPos);
+        ////Debug.Log(mousePos + " is at cell: " + cellPos);
         banana.position = pos;
     }
 }

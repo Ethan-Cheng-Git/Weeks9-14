@@ -26446,6 +26446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TilemapStuff
   tilemap: {fileID: 531738116}
+  banana: {fileID: 2082331858}
 --- !u!4 &1121370051
 Transform:
   m_ObjectHideFlags: 0
@@ -50738,6 +50739,11 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!4 &2082331858 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8158423662985848738, guid: c2d78f3f5dfcad94789141353470293d, type: 3}
+  m_PrefabInstance: {fileID: 6688553985884710200}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2087817696
 GameObject:
   m_ObjectHideFlags: 0
@@ -52166,7 +52172,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
-  - {fileID: 6688553985884710200}
   - {fileID: 623800480}
   - {fileID: 1121370051}
   - {fileID: 1433916621}
+  - {fileID: 6688553985884710200}
