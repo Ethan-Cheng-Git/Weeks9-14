@@ -1,0 +1,55 @@
+{
+    "version": 1,
+    "name": "System Task Actions",
+    "maps": [
+        {
+            "name": "Current Gameplay",
+            "id": "f62a0863-c48a-4de2-b2fd-7f2bce494bbc",
+            "actions": [
+                {
+                    "name": "PushBack",
+                    "type": "Button",
+                    "id": "74288f9b-c056-47ed-9b7a-13f0b08f07c4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Jump",
+                    "type": "Button",
+                    "id": "754422c5-232d-41a4-bf05-a969c4179f69",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "55d6d738-6dba-45b5-9dc3-9950c16a122a",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "PushBack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c3f8276d-a7b2-41bb-bdea-6f477c32880e",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
