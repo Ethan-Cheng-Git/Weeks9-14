@@ -242,7 +242,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 475866392}
-  - component: {fileID: 475866393}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -267,21 +266,6 @@ Transform:
   - {fileID: 2125859545}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &475866393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 475866391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5864a1a6593062f4da3d4b1878a74f3f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerJump
-  jumpingHeight: 5
-  fallSpeed: 6
-  isGround: 1
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,7 +794,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInputHandle
   chase: {fileID: 795214528}
-  jump: {fileID: 475866393}
 --- !u!1001 &5747248776925910139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -820,12 +803,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 863453783}
     m_Modifications:
     - target: {fileID: 2652548950105465753, guid: cd40a53c8a2088246aae2165c04b2c71, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 98.11286
-      objectReference: {fileID: 0}
-    - target: {fileID: 2652548950105465753, guid: cd40a53c8a2088246aae2165c04b2c71, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.1049
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 2652548950105465753, guid: cd40a53c8a2088246aae2165c04b2c71, type: 3}
       propertyPath: m_LocalPosition.y
@@ -890,16 +869,12 @@ PrefabInstance:
       value: Sky
       objectReference: {fileID: 0}
     - target: {fileID: 7394948795047815547, guid: 9687015b71bfbb745a97597994bf65e3, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 100.27592
-      objectReference: {fileID: 0}
-    - target: {fileID: 7394948795047815547, guid: 9687015b71bfbb745a97597994bf65e3, type: 3}
       propertyPath: m_LocalScale.y
       value: 6.2856274
       objectReference: {fileID: 0}
     - target: {fileID: 7394948795047815547, guid: 9687015b71bfbb745a97597994bf65e3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.5421
+      value: -0.06
       objectReference: {fileID: 0}
     - target: {fileID: 7394948795047815547, guid: 9687015b71bfbb745a97597994bf65e3, type: 3}
       propertyPath: m_LocalPosition.y

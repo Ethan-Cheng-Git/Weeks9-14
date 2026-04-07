@@ -1,8 +1,12 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 public class PlayerInputHandle : MonoBehaviour
 {
+    Coroutine disable;
     public ChaserPushBack chase;
+    public PlayerJump jump;
+    public bool canPushItBack = true;
     void Start()
     {
         
@@ -15,7 +19,7 @@ public class PlayerInputHandle : MonoBehaviour
     }
     public void OnPushItBack(InputAction.CallbackContext context)
     {
-        if (context.phase == InputActionPhase.Performed)
+        if (context.phase == InputActionPhase.Performed && canPushItBack)
         {
             chase.PushItBack();
         }
@@ -25,9 +29,30 @@ public class PlayerInputHandle : MonoBehaviour
     {
         if (context.phase == InputActionPhase.Performed)
         {
-            chase.Jump();
+            jump.Jump();
         }
 
+    }
+
+    public void StartDisable()
+    {
+        if (disable != null)
+        {
+            StopCoroutine(disable);
+        }
+        disable = StartCoroutine(DisableThePushBack());
+    }
+
+    IEnumerator DisableThePushBack()
+    {
+        canPushItBack = false;
+        float t = 0;
+        while (t < 0.5f) 
+        {
+            t += Time.deltaTime;
+            yield return null;
+        }
+        canPushItBack = true;
     }
 
 }

@@ -19,9 +19,4 @@ public class ChaserPushBack : MonoBehaviour
     {
         transform.position -= Vector3.right * pushBackValue;
     }
-
-    public void Jump()
-    {
-
-    }
 }
